@@ -8,6 +8,8 @@ import { TodoHeaderComponent } from './todo-header/todo-header.component';
 import { TodoInputComponent } from './todo-input/todo-input.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
+import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { TodoMergeService } from './todo-merge.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,14 @@ import { TodoFooterComponent } from './todo-footer/todo-footer.component';
     TodoHeaderComponent,
     TodoInputComponent,
     TodoListComponent,
-    TodoFooterComponent
+    TodoFooterComponent,
+    TodoDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TodoMergeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

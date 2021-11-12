@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalConstants } from '../global';
+import { TodoMergeService } from '../todo-merge.service';
 
 @Component({
   selector: 'app-todo-input',
@@ -20,5 +21,10 @@ export class TodoInputComponent {
       }
     }
     this.arraylen -= 1
+  }
+  constructor(private TodoM:TodoMergeService){
+  }
+  ngOnInit():void{
+    this.todoArray = this.TodoM.gettodo()
   }
 }
